@@ -2,6 +2,8 @@ import "./Header.scss";
 
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import headerIcon from "../../assets/images/Mohan-muruge.jpg";
+
+
 const Header = () => {
   return (
     <header className="header">
