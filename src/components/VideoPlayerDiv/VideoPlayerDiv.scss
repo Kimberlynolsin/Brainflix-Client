@@ -41,10 +41,12 @@
       background: url(../../assets/images/views.svg);
       @include icon-info;
     }
+
   }
 }
 
 .video__container__comments--count {
   font-weight: bold;
   color: $brainflix-black;
+  margin-bottom: 1.6rem;
 }

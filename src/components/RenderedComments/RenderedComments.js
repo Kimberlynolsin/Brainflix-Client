@@ -1,29 +1,28 @@
 import "./RenderedComments.scss";
 
 const RenderedComments = (props) => {
-    
-    const commentLists = props.text.comments.map((element) => {
-    const formattedDate = new Date().toLocaleDateString(element.timestamp)  
-        
+  const commentLists = props.text.comments.map((element) => {
+    // const formattedDate = new Date().toLocaleDateString(element.timestamp);
+
     return (
-    <>
-      <div id={element.id}>
-        <p className="comment__details">{element.name}</p>
-        <p className="comment__details">{formattedDate}</p>
-      </div>
-      <div>
-        <p className="comment__para">{element.comment}</p>
-      </div> 
-    </>
-    )
+      <>
+        <div className="comment">
+          <div className="comment__container">
+            <div className="comment__container__icon"></div>
+            <div className="comment__container">
+              <p className="comment__container__name">{element.name}</p>
+              <p className="comment__container__details">{new Date().toLocaleDateString(element.timestamp)}</p>
+            </div>
+          </div>
+          <p className="comment__para">{element.comment}</p>
+        </div>
+      </>
+    );
   });
 
   return (
     <>
-      <div className="comment">
-        <div className="comment__icon"></div>
-        {commentLists}
-      </div>
+      <div>{commentLists}</div>
     </>
   );
 };
