@@ -1,4 +1,6 @@
 @use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
 
 *,
 *::before,
@@ -11,7 +13,11 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-family: 'Avenir';
   margin: 0 1.6rem;
+
+  @include tablet{
+    font-family: 1.4rem;
+  }
 }

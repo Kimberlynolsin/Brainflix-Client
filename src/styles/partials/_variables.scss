@@ -8,6 +8,14 @@
     border-radius: .5rem;
 }
 
+@mixin icon-info{
+  background-repeat: no-repeat;
+  background-position-x: 1rem ;
+  padding: 0 0 0 4rem;
+  // height: 3.6rem;
+
+}
+
 @mixin tablet {
     @media (min-width: 768px) {
       @content;
@@ -21,4 +29,5 @@
   }
 
   $brainflix-black: #323232;
-  $mercury:#e1e1e1
+  $mercury:#e1e1e1;
+  $silver: #afafaf;

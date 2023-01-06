@@ -1,0 +1,40 @@
+@use "../../styles/partials/variables" as *;
+
+.video__container {
+  display: flex;
+  border-bottom: 1px solid $mercury;
+    padding-bottom: 2rem;
+
+  &__details {
+    flex-grow: 1;
+
+   
+    &--channel {
+      font-weight: bold;
+      color: $brainflix-black;
+    }
+
+    &--other,
+    &--views, 
+    &--likes{
+        color: $silver;
+    }
+
+    &--likes{
+        background: url(../../assets/images/likes.svg);
+        @include icon-info
+    }
+
+    &--views{
+        background: url(../../assets/images/views.svg);
+        @include icon-info
+    }
+
+
+  }
+}
+
+.video__container__comments--count {
+  font-weight: bold;
+  color: $brainflix-black;
+}

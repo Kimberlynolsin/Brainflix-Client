@@ -1,20 +1,19 @@
 import "../../components/VideoPlayer/VideoPlayer.scss";
-import data from "../../data/video-details.json";
-import playBtn from '../../assets/images/play.svg';
+import VideoPlayerDiv from "../VideoPlayerDiv/VideoPlayerDiv";
 
-const VideoPlayer = () => {
-  const video = data;
-console.log(video)
+const VideoPlayer = (props) => {
   return (
-    <div className="video-player">
-      <video poster={playBtn} controls
-        className="video-player__img"
-        key={video[0].id}
-        src={video[0].video}
+    <div className="video">
+      <video
+        controls
+        className="video__img"
+        key={props.vid.id}
+        poster={props.vid.image}
       ></video>
       <div>
-      <h1 className="video-player__title">{video[0].title}</h1>
+        <h1 className="video__title">{props.vid.title}</h1>
       </div>
+      <VideoPlayerDiv details ={props.vid} />
     </div>
   );
 };
