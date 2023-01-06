@@ -1,0 +1,42 @@
+@use "../../styles/partials/variables" as *;
+
+.comment__form {
+  margin: 1.6rem;
+  display: flex;
+  border-bottom: 0.2rem solid $mercury;
+
+  label {
+    text-transform: uppercase;
+    color: $silver;
+    font-weight: 600;
+  }
+  textarea {
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: "Avenir";
+    border: solid $mercury;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+  }
+  &__img {
+    @include icon-profilePic;
+    margin-left: 0;
+  }
+
+  [type="submit"] {
+    background: url('../../assets/images/publish.svg');
+    @include icon-input;
+    @include btn;
+    
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+
+    &__input{
+        width: 100%;
+    }
+  }
+
+}

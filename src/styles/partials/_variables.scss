@@ -16,6 +16,15 @@
 
 }
 
+@mixin icon-profilePic{
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+
+  
+}
+
 @mixin tablet {
     @media (min-width: 768px) {
       @content;
@@ -28,6 +37,15 @@
     }
   }
 
+  @mixin btn{
+    background-color: $brainflix-blue;
+    border-style: initial;
+    color: white;
+    margin: 2rem 0;
+    flex-grow: 1;
+  }
+
   $brainflix-black: #323232;
   $mercury:#e1e1e1;
   $silver: #afafaf;
+  $brainflix-blue:  #0095ff;

@@ -3,34 +3,44 @@
 .video__container {
   display: flex;
   border-bottom: 1px solid $mercury;
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
+
+  @include tablet {
+    justify-content: space-between;
+  }
 
   &__details {
     flex-grow: 1;
 
-   
+    @include tablet {
+      display: flex;
+      flex-grow: 0;
+    }
+
     &--channel {
       font-weight: bold;
       color: $brainflix-black;
+      margin: 2rem;
+      margin-left: 0;
     }
 
     &--other,
-    &--views, 
-    &--likes{
-        color: $silver;
+    &--views,
+    &--likes {
+      color: $silver;
+      margin: 2rem;
+      margin-left: 0;
     }
 
-    &--likes{
-        background: url(../../assets/images/likes.svg);
-        @include icon-info
+    &--likes {
+      background: url(../../assets/images/likes.svg);
+      @include icon-info;
     }
 
-    &--views{
-        background: url(../../assets/images/views.svg);
-        @include icon-info
+    &--views {
+      background: url(../../assets/images/views.svg);
+      @include icon-info;
     }
-
-
   }
 }
 
