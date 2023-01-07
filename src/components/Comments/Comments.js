@@ -25,6 +25,7 @@ const Comments = (props) => {
           <input type="submit" value="COMMENT" id="submit" />
         </div>
       </form>
+      
       <RenderedComments text={props.comments} />
     </>
   );
