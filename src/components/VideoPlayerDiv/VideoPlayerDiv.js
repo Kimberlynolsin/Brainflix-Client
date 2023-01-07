@@ -2,7 +2,6 @@ import "./VideoPlayerDiv.scss";
 
 const VideoPlayerDiv = (props) => {
   const date = new Date().toLocaleDateString(props.details.timestamp);
-  console.log(date);
 
   return (
     <>

@@ -10,6 +10,27 @@ function App() {
   const [vidData, setDefaultVid] = useState(data);
   const currentVid = vidData[0]
 
+  function handlerFunc(e){
+
+    const yolo = 'next-vid'=== e.target ? console.log(e.currentTarget): console.log('try again');
+    
+     console.log(yolo);
+     
+    
+    // if( 'next-vid'=== e.currentTarget) {
+
+    // }
+
+    /*
+    if div was clicked
+      replace main video with currently clicked element
+      
+    */
+  }
+
+  function updateVideo(){
+    
+  }
 
 
   return (
@@ -17,7 +38,7 @@ function App() {
       <Header />
       <VideoPlayer vid = {currentVid}/>
       <Comments comments = {currentVid}/>
-      <NextVideo vidList={vidData}/>
+      <NextVideo vidList={vidData} handler = {handlerFunc}/>
     </>
   );
 }
