@@ -1,9 +1,12 @@
 import "./NextVideo.scss";
 
 const NextVideo = (props) => {
-  const videoThumbnail = props.vidList.map((el) => {
+  
+
+  const videoThumbnail = props.shortVid.map((el) => {
+    
     return (
-      <div className="next-vid" onClick={props.handler}>
+      <div id={el.id} className="next-vid" onClick={props.handler}>
         <img className="next-vid__img" src={el.image}></img>
         <div className="next-vid__details">
           <p className="next-vid__description">{el.title}</p>
