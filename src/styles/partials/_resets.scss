@@ -15,10 +15,8 @@ html {
 body {
   font-size: 1.3rem;
   font-family: 'Avenir';
-  margin: 0 1.6rem;
 
   @include tablet{
     font-size: 1.4rem;
-    margin: 0 3.6rem;
   }
 }

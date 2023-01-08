@@ -6,19 +6,19 @@ const NextVideo = (props) => {
   const videoThumbnail = props.shortVid.map((el) => {
     
     return (
-      <div id={el.id} className="next-vid" onClick={props.handler}>
-        <img className="next-vid__img" src={el.image}></img>
-        <div className="next-vid__details">
-          <p className="next-vid__description">{el.title}</p>
-          <p className="next-vid__author">{el.channel}</p>
+      <div id={el.id} className="next-vid-section__thumbnail" onClick={props.handler}>
+        <img className="next-vid-section__img" src={el.image}></img>
+        <div className="next-vid-section__details">
+          <p className="next-vid-section__description">{el.title}</p>
+          <p className="next-vid-section__author">{el.channel}</p>
         </div>
       </div>
     );
   });
 
   return (
-    <section>
-      <h2 className="next-vid__title">next videos</h2>
+    <section className="next-vid-section">
+      <h2 className="next-vid-section__title">next videos</h2>
       {videoThumbnail}
     </section>
   );

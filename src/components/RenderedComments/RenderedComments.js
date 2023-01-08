@@ -2,9 +2,12 @@ import "./RenderedComments.scss";
 
 const RenderedComments = (props) => {
   const commentLists = props.text.comments.map((element) => {
+
+    console.log(element.id);
+    
     return (
       <>
-        <div className="comment">
+        <div className="comment" key={element.id}>
           <div className="comment__container">
             <div className="comment__container__icon"></div>
             <div className="comment__container">

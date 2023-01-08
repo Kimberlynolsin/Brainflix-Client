@@ -31,7 +31,6 @@ function App() {
       <VideoPlayer vid={currentVid} />
       <Comments comments={currentVid} />
       <NextVideo
-        vidList={vidDetails}
         shortVid={nextVideos}
         handler={handlerFunc}
       />

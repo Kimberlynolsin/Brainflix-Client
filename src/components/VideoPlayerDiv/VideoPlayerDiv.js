@@ -4,7 +4,7 @@ const VideoPlayerDiv = (props) => {
   const date = new Date().toLocaleDateString(props.details.timestamp);
 
   return (
-    <>
+    <div className="video">
       <div className="video__container">
         <div className="video__container__details video__container__details--left">
           <p className="video__container__details--channel">By {props.details.channel}</p>
@@ -21,7 +21,7 @@ const VideoPlayerDiv = (props) => {
       <div className="video__container__comments">
         <p className="video__container__comments--count">{props.details.comments.length} comments</p>
       </div>
-    </>
+    </div>
   );
 };
 
