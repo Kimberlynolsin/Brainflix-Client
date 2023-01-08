@@ -8,20 +8,24 @@
   &__title {
     text-transform: uppercase;
     color: $silver;
+    margin: 2rem 0;
+    font-weight: bold;
   }
   &__thumbnail {
     display: flex;
-    margin: 1rem 0;
+    margin: 0 0 2rem 0;
     align-items: center;
   }
   &__img {
-    width: 26%;
-    height: 20vw;
+    width: 36%;
     border-radius: 4px;
     margin-right: 1rem;
+    max-height: 60rem;
+    aspect-ratio: 1.5;
   }
 
   &__description {
     font-weight: bold;
+    margin-top: 0;
   }
 }

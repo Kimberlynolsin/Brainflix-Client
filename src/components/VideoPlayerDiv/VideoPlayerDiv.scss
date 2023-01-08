@@ -9,7 +9,7 @@
   &__container {
     display: flex;
     border-bottom: 1px solid $mercury;
-    padding-bottom: 2rem;
+    border-top: 1px solid $mercury;
 
     @include tablet {
       justify-content: space-between;
@@ -34,7 +34,7 @@
       &--views,
       &--likes {
         color: $silver;
-        margin: 2rem;
+        margin-top: 2rem;
         margin-left: 0;
       }
 
@@ -48,11 +48,14 @@
         @include icon-info;
       }
     }
-  }
-}
 
-.video__container__comments--count {
-  font-weight: bold;
-  color: $brainflix-black;
-  margin-bottom: 1.6rem;
+    &__description p{
+      margin: 2rem 0;
+    }
+    &__comments--count {
+      font-weight: bold;
+      color: $brainflix-black;
+      margin-bottom: 1.6rem;
+    }
+  }
 }

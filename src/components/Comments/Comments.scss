@@ -1,7 +1,7 @@
 @use "../../styles/partials/variables" as *;
 
 .comment__form {
-  margin: $margin-mobile 1.6rem;
+  margin: 0 1.6rem;
   display: flex;
   border-bottom: 0.1rem solid $mercury;
 
@@ -21,31 +21,18 @@
     border: solid $mercury;
     border-radius: 0.5rem;
     font-size: 1.4rem;
+    
+    input::placeholder{
+      color: black;
+    }
 
     @include tablet {
-      padding: 0 1rem;
+      padding: 1rem 1rem 0 1rem;
     }
   }
   &__img {
     @include icon-profilePic;
     margin-left: 0;
-  }
-
-  &__submit {
-    display: flex;
-    width: 100%;
-  }
-
-  [type="submit"] {
-    background: url("../../assets/images/publish.svg");
-    width: 100%;
-    @include icon-input;
-    @include btn;
-
-    @include tablet {
-      flex-shrink: 1;
-      margin: 0 0 0 1rem;
-    }
   }
 
   &__container {
@@ -59,6 +46,11 @@
       margin-bottom: 2rem;
     }
 
+    &__submit {
+      display: flex;
+      
+    }
+
     &__input {
       display: flex;
       flex-direction: column;
@@ -68,4 +60,21 @@
       }
     }
   }
+
+
+  [type="submit"] {
+    background: url("../../assets/images/add_comment.svg");
+    width: 100%;
+    @include icon-input;
+    @include btn;
+
+    @include tablet {
+      flex-shrink: 1;
+      margin: 0 0 0 1rem;
+      height: 4.7rem;
+
+      
+    }
+  }
+
 }

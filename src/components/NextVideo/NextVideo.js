@@ -18,7 +18,7 @@ const NextVideo = (props) => {
 
   return (
     <section className="next-vid-section">
-      <h2 className="next-vid-section__title">next videos</h2>
+      <p className="next-vid-section__title">next videos</p>
       {videoThumbnail}
     </section>
   );

@@ -19,7 +19,7 @@ const VideoPlayerDiv = (props) => {
         <p>By {props.details.description}</p>
       </div>
       <div className="video__container__comments">
-        <p className="video__container__comments--count">{props.details.comments.length} comments</p>
+        <p className="video__container__comments--count">{props.details.comments.length} Comments</p>
       </div>
     </div>
   );

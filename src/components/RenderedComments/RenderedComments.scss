@@ -1,28 +1,58 @@
 @use "../../styles/partials/variables" as *;
 
-.comment {
+.comment-container {
+  display: flex;
   border-bottom: 0.1rem solid $mercury;
-  margin: $margin-mobile 1.6rem;
+  margin: 0 1.6rem;
   @include tablet {
     margin: $margin-tablet;
-    margin-top: 1.5rem;
+    margin-top: 0;
   }
-  &__container {
+
+  &__icon {
+    background-color: $mercury;
+    border-radius: 50%;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin: 1rem 1rem 0 0;
+    flex-shrink: 0;
+
+    @include tablet{
+      margin-top: 2rem;
+    }
+    
+  
+  }
+
+  &__items {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+  }
+  &__name,
+  &__details {
+    margin-bottom: 1rem;
 
-    &__icon {
-      background-color: $mercury;
-      border-radius: 50%;
-      width: 3.6rem;
-      height: 3.6rem;
-      margin: 0 2rem 0 0;
-      flex-shrink: 0;
+    @include tablet{
+      margin-top: 2rem;
     }
+    
+   
+  }
+  &__name {
+    font-weight: bold;
+  }
 
-    &__name {
-      font-weight: bold;
+  &__details{
+    color: $silver;
+  }
+
+  &__para {
+    margin: 0 0 1rem 0;
+    
+    @include tablet{
+      margin: 0 0 2rem 0;
+
     }
   }
 }
