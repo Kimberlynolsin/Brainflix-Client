@@ -8,6 +8,14 @@
     margin: $margin-tablet;
     margin-top: 0;
   }
+  @include desktop{
+    margin-right: 0;
+    padding-right: 3.6rem;
+    border-bottom: 0;
+    border-top: 0.1rem solid $mercury;
+
+    
+  }
 
   &__icon {
     background-color: $mercury;
@@ -18,7 +26,7 @@
     flex-shrink: 0;
 
     @include tablet{
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
     
   
@@ -32,9 +40,9 @@
   &__name,
   &__details {
     margin-bottom: 1rem;
-
+    
     @include tablet{
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
     
    
@@ -51,7 +59,7 @@
     margin: 0 0 1rem 0;
     
     @include tablet{
-      margin: 0 0 2rem 0;
+      margin: 0 0 3rem 0;
 
     }
   }

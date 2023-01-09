@@ -9,13 +9,16 @@
     margin: $margin-tablet;
   }
 
+ 
+  
   @include tablet {
     flex-direction: row;
     justify-content: center;
   }
-
+  
   @include desktop {
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: $margin-desktop;
   }
 
   &__logo {
@@ -71,6 +74,10 @@
     @include tablet {
       display: none;
       margin: 0;
+    }
+
+    @include desktop{
+      margin-left: 1rem;
     }
   }
 

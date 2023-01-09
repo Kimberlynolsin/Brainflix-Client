@@ -2,7 +2,6 @@ import "./NextVideo.scss";
 
 const NextVideo = (props) => {
   
-
   const videoThumbnail = props.shortVid.map((el) => {
     
     return (

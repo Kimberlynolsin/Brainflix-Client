@@ -4,6 +4,7 @@ import data from "../src/data/video-details.json";
 import shortData from "../src/data/videos.json";
 import Header from "./components/Header/Header";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import VideoPlayerDiv from "./components/VideoPlayerDiv/VideoPlayerDiv";
 import Comments from "./components/Comments/Comments";
 import NextVideo from "./components/NextVideo/NextVideo";
 
@@ -22,22 +23,21 @@ function App() {
       (element) => element.id !== e.currentTarget.id
     );
     setNextVideos(newArr);
-    
   }
 
   return (
     <>
       <Header />
       <VideoPlayer vid={currentVid} />
-      <Comments comments={currentVid} />
-      <NextVideo
-        shortVid={nextVideos}
-        handler={handlerFunc}
-      />
+      <main className="main-section">
+        <div className="main-section__content">
+        <VideoPlayerDiv vid={currentVid} />
+        <Comments comments={currentVid} />
+        </div>
+        <NextVideo shortVid={nextVideos} handler={handlerFunc} />
+      </main>
     </>
   );
 }
 
 export default App;
-
-

@@ -7,25 +7,17 @@
     @include tablet {
       padding: $margin-tablet;
     }
+    @include desktop {
+      padding: 0 25rem;
+    }
   }
 
   &__img {
     max-width: 100%;
     height: auto;
-  }
 
-  &__title {
-    color: $brainflix-black;
-    font-size: 2.4rem;
-    margin: 2rem 1.6rem;
-
-    @include tablet {
-      border-bottom: none;
-      padding: 0;
-      font-size: 3.3rem;
-      margin: 2rem 3.6rem;
+    @include desktop {
+      aspect-ratio: 2;
     }
-
-   
   }
 }

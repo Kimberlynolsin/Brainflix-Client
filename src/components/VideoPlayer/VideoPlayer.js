@@ -1,5 +1,4 @@
 import "../../components/VideoPlayer/VideoPlayer.scss";
-import VideoPlayerDiv from "../VideoPlayerDiv/VideoPlayerDiv";
 
 const VideoPlayer = (props) => {
   return (
@@ -12,10 +11,6 @@ const VideoPlayer = (props) => {
           poster={props.vid.image}
         ></video>
       </div>
-      <div>
-        <h1 className="video-section__title">{props.vid.title}</h1>
-      </div>
-      <VideoPlayerDiv details={props.vid} />
     </section>
   );
 };
