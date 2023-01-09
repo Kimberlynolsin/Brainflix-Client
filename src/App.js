@@ -31,8 +31,8 @@ function App() {
       <VideoPlayer vid={currentVid} />
       <main className="main-section">
         <div className="main-section__content">
-        <VideoPlayerDiv vid={currentVid} />
-        <Comments comments={currentVid} />
+          <VideoPlayerDiv vid={currentVid} />
+          <Comments comments={currentVid} />
         </div>
         <NextVideo shortVid={nextVideos} handler={handlerFunc} />
       </main>

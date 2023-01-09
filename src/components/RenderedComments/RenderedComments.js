@@ -15,10 +15,8 @@ const RenderedComments = (props) => {
                 {new Date().toLocaleDateString(element.timestamp)}
               </p>
             </div>
-          
-          <p className="comment-container__para">{element.comment}</p>
+            <p className="comment-container__para">{element.comment}</p>
           </div>
-          
         </div>
       </>
     );

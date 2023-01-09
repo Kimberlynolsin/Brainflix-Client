@@ -9,10 +9,10 @@
     border-bottom: none;
     padding: 0;
     font-size: 3.3rem;
-    margin: 2rem 0 0 3.6rem;
+    margin: 2rem 3.6rem 0 3.6rem;
   }
 
-  @include desktop{
+  @include desktop {
     margin-top: 3rem;
   }
 }
@@ -22,22 +22,22 @@
     margin: $margin-tablet;
   }
 
-  @include desktop{
+  @include desktop {
     margin-right: 0;
   }
-  
+
   &__container {
     display: flex;
     border-bottom: 1px solid $mercury;
     border-top: 1px solid $mercury;
-    
+
     @include tablet {
       justify-content: space-between;
       border-top: 0;
-      padding-right: 3.6rem  ;
+      padding-right: 3.6rem;
     }
 
-    @include desktop{
+    @include desktop {
       margin: 0;
     }
 
@@ -83,9 +83,8 @@
         padding-right: 3.6rem;
       }
 
-      @include desktop{
+      @include desktop {
         margin-bottom: 5rem;
-
       }
     }
     &__comments--count {

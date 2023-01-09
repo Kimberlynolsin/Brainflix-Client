@@ -3,7 +3,6 @@ import "./Header.scss";
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import headerIcon from "../../assets/images/Mohan-muruge.jpg";
 
-
 const Header = () => {
   return (
     <header className="header">
@@ -20,7 +19,10 @@ const Header = () => {
             UPLOAD
           </button>
         </label>
-          <img className="header__icon header__icon--tablet" src={headerIcon}></img>
+        <img
+          className="header__icon header__icon--tablet"
+          src={headerIcon}
+        ></img>
       </form>
     </header>
   );
