@@ -1,6 +1,9 @@
 import "../../components/VideoPlayer/VideoPlayer.scss";
 
 const VideoPlayer = (props) => {
+
+  console.log(props.vid.image);
+  
   return (
     <section className="video-section">
       <div className="video-section__container">
