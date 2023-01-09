@@ -12,7 +12,7 @@ const Header = () => {
           <label className="header__input__field">
             <input type="text" placeholder="Search" name="input-field" />
           </label>
-          <img className="header__icon" src={headerIcon}></img>
+          <img className="header__icon" src={headerIcon} alt="profile picture"></img>
         </div>
         <label className="header__btn__label">
           <button type="submit" name="submit-btn">
@@ -22,6 +22,7 @@ const Header = () => {
         <img
           className="header__icon header__icon--tablet"
           src={headerIcon}
+          alt="profile picture"
         ></img>
       </form>
     </header>
