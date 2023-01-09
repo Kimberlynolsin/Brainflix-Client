@@ -24,6 +24,8 @@
     margin: 0 0 1rem 0;
     align-items: center;
 
+    // pointer-events: none;
+
     @include tablet {
       margin: 0 0 3rem 0;
     }

@@ -5,6 +5,7 @@ const NextVideo = (props) => {
     return (
       <div
         id={el.id}
+        key={el.id}
         className="next-vid-section__thumbnail"
         onClick={props.handler}
       >
