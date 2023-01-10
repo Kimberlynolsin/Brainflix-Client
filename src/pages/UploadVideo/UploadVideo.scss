@@ -1,0 +1,19 @@
+@use '../../styles/partials/variables' as *;
+.upload{
+    &__form{
+        display: flex;
+        flex-direction: column;
+
+      &__title{
+        text-transform: uppercase;
+      }
+
+      &__description__title{
+        text-transform: uppercase;
+      }
+
+      [type="submit"]{
+        background-color: $brainflix-blue;
+      }
+    }
+}
