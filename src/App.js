@@ -7,6 +7,7 @@ import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import VideoPlayerDiv from "./components/VideoPlayerDiv/VideoPlayerDiv";
 import Comments from "./components/Comments/Comments";
 import NextVideo from "./components/NextVideo/NextVideo";
+import UploadVideo from "./pages/UploadVideo/UploadVideo";
 
 function App() {
   const [vidDetails, setDefaultVid] = useState(data);
@@ -36,6 +37,9 @@ function App() {
         </div>
         <NextVideo shortVid={nextVideos} handler={handlerFunc} />
       </main>
+      <UploadVideo/>
+
+      
     </>
   );
 }
