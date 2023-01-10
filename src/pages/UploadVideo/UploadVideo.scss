@@ -1,19 +1,28 @@
-@use '../../styles/partials/variables' as *;
-.upload{
-    &__form{
-        display: flex;
-        flex-direction: column;
+@use "../../styles/partials/variables" as *;
+.upload {
 
-      &__title{
-        text-transform: uppercase;
-      }
+  &__title{
+    font-size: 2.4rem;
+    margin: 2rem 1.6rem;
+  }
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: $silver;
+    margin: 0 1.6rem 1rem ;
 
-      &__description__title{
-        text-transform: uppercase;
-      }
+  }
 
-      [type="submit"]{
-        background-color: $brainflix-blue;
-      }
-    }
+  &__container{
+    margin: 0 1.6rem;
+  }
+  
+  &__preview{
+    width: 100%;
+    border-radius: .5rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
 }
