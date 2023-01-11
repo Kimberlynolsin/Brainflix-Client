@@ -1,25 +1,63 @@
 @use "../../styles/partials/variables" as *;
+@use '../../styles/partials/typography' as *;
 .upload {
+  border-top: 0.1rem solid $mercury;
 
-  &__title{
+  @include desktop{
+    padding-bottom: 3rem;
+  }
+  &__title {
     font-size: 2.4rem;
     margin: 2rem 1.6rem;
+
+    @include tablet {
+      margin: $margin-tablet;
+      border-bottom: 0.1rem solid $mercury;
+      margin-top: 3rem;
+      padding: 0 0 2rem 0;
+    }
+
+    @include desktop{
+      margin: 3rem 18.5rem;
+    }
+
   }
   &__subtitle {
     text-transform: uppercase;
     font-size: 1.3rem;
     color: $silver;
-    margin: 0 1.6rem 1rem ;
+    margin: 0 1.6rem 1rem;
 
+    @include tablet{
+      font-weight: normal;
+      margin: $margin-tablet;
+      margin-top: 3rem;
+      
+
+    }
+    @include desktop{
+      margin: 3rem 18.5rem;
+    }
   }
 
-  &__container{
-    margin: 0 1.6rem;
+  &__container {
+    margin: $margin-mobile;
+
+    @include tablet{
+      width: 50%;
+      margin: $margin-tablet;
+    }
+
+    @include desktop{
+      width: 30%;
+      margin: 3rem 18.5rem;
+
+    }
   }
-  
-  &__preview{
+
+  &__preview {
     width: 100%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
   &__form {
     display: flex;

@@ -1,0 +1,15 @@
+@use "../../styles/partials/variables" as *;
+.not-found__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5rem solid $brainflix-blue;
+  margin: 0 1.6rem;
+  flex-direction: column;
+  h2 {
+    margin: 2rem;
+  }
+  iframe {
+    width: 100%;
+  }
+}

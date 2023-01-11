@@ -1,16 +1,16 @@
-@use "./styles/partials/resets";
-@use "./styles/partials/typography" as *;
-@use "./styles/partials/variables" as *;
+// @use "./styles/partials/resets";
+// @use "./styles/partials/typography" as *;
+// @use "./styles/partials/variables" as *;
 
-.main-section {
-  @include desktop {
-    display: flex;
+// .main-section {
+//   @include desktop {
+//     display: flex;
 
-    &__content {
-      flex-direction: column;
-      border-right: 1px solid $mercury;
-      margin-left: 15rem;
+//     &__content {
+//       flex-direction: column;
+//       border-right: 1px solid $mercury;
+//       margin-left: 15rem;
       
-    }
-  }
-}
+//     }
+//   }
+// }
