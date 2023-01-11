@@ -11,6 +11,22 @@ const UploadVideo = () => {
         <div className="upload__container">
           <img className="upload__preview" src={preview} alt="bicycle"></img>
         </div>
+        <form className="upload__form">
+          <label className="upload__form__label">
+            <p className="upload__form__title">title your video </p>
+            <input type="text" placeholder="Add a title to your video"></input>
+          </label>
+          <label className="upload__form__description">
+            <p className="upload__form__description__title">
+              add a video description
+            </p>
+            <input
+              type="text"
+              placeholder="Add a description to your video"
+            ></input>
+          </label>
+          <input type="submit" value="PUBLISH"></input>
+        </form>
       </section>
     </>
   );

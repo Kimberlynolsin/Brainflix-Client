@@ -63,4 +63,12 @@
     display: flex;
     flex-direction: column;
   }
+
+  &__description__title{
+    text-transform: uppercase;
+  }
+
+  [type="submit"]{
+    background-color: $brainflix-blue;
+  }
 }
