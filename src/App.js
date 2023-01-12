@@ -11,6 +11,7 @@ import Header from "./components/Header/Header";
 import UploadVideo from "./pages/UploadVideo/UploadVideo";
 import NotFound from "./pages/NotFound/NotFound";
 import HomePage from "./pages/HomePage/HomePage";
+import NextVideo from "./components/NextVideo/NextVideo";
 
 function App() {
   // const [vidDetails, setDefaultVid] = useState(data);
@@ -36,6 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/upload" element={<UploadVideo />} />
+          <Route path="/next-videos/:id" element={<NextVideo/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         {/* <VideoPlayer vid={currentVid} />
