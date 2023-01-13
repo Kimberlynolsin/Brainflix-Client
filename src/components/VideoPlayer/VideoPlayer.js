@@ -1,16 +1,20 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../../components/VideoPlayer/VideoPlayer.scss";
 
-const VideoPlayer = (props) => {
-  
+const VideoPlayer = ({ defaultVideo }) => {
+  // console.log('VideoPlayer: ', defaultVideo)
   return (
     <section className="video-section">
       <div className="video-section__container">
-        <video
-          controls
-          className="video-section__img"
-          key={props.vid.id}
-          poster={props.vid.image}
-        ></video>
+        <Link to={`/${defaultVideo.id}`}>
+          <video
+            controls
+            className="video-section__img"
+            id={defaultVideo.id}
+            poster={defaultVideo.image}
+          ></video>
+        </Link>
       </div>
     </section>
   );

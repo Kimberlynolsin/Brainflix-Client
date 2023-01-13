@@ -1,7 +1,13 @@
 import "./RenderedComments.scss";
 
-const RenderedComments = (props) => {
-  const commentLists = props.text.comments.map((element) => {
+const RenderedComments = ({text}) => {
+
+  
+  const {comments} = text
+  
+  console.log('rendered',comments);
+  
+  const commentLists = comments && comments.map((element) => {
     return (
       <div className="comment-container" key={element.id}>
         <div className="comment-container__icon"></div>
@@ -9,7 +15,7 @@ const RenderedComments = (props) => {
           <div className="comment-container__items">
             <p className="comment-container__name">{element.name}</p>
             <p className="comment-container__details">
-              {new Date().toLocaleDateString(element.timestamp)}
+              {new Date(element.timestamp).toLocaleDateString()}
             </p>
           </div>
           <p className="comment-container__para">{element.comment}</p>

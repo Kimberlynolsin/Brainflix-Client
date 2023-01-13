@@ -26,8 +26,8 @@ const UploadVideo = () => {
               placeholder="Add a description to your video"
             ></textarea>
           </label>
-          <input type="submit" value="PUBLISH" class="publish"></input>
-          <input type="submit" value="CANCEL" class="cancel"></input>
+          <input type="submit" value="PUBLISH" className="publish"></input>
+          <input type="submit" value="CANCEL" className="cancel"></input>
         </form>
       </section>
     </>

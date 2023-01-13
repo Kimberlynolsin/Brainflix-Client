@@ -9,7 +9,7 @@ const NotFound = () => {
         width="480"
         height="480"
         frameBorder="0"
-        class="giphy-embed"
+        className="giphy-embed"
         allowFullScreen
       ></iframe>
       <p>

@@ -2,7 +2,10 @@ import "./Comments.scss";
 import mohan from "../../assets/images/Mohan-muruge.jpg";
 import RenderedComments from "../RenderedComments/RenderedComments";
 
-const Comments = (props) => {
+const Comments = ({comments}) => {
+
+  console.log('COMMENTS:', comments);
+  
   return (
     <>
       <section className="comments-section">
@@ -29,7 +32,7 @@ const Comments = (props) => {
           </div>
         </form>
 
-        <RenderedComments text={props.comments} />
+        <RenderedComments text={comments} />
       </section>
     </>
   );

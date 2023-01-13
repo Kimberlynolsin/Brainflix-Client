@@ -1,40 +1,40 @@
 import "./VideoPlayerDiv.scss";
 
-const VideoPlayerDiv = (props) => {
-  const date = new Date().toLocaleDateString(props.vid.timestamp);
+const VideoPlayerDiv = ({defaultVideo}) => {
+
 
   return (
     <section className="video-summary-section">
       <div>
-        <h1 className="video-section__title">{props.vid.title}</h1>
+        <h1 className="video-section__title">{defaultVideo.title}</h1>
       </div>
       <div className="video">
         <div className="video__container">
           <div className="video__container__details video__container__details--left">
             <p className="video__container__details--channel">
-              By {props.vid.channel}
+              By {defaultVideo.channel}
             </p>
-            <p className="video__container__details--other">{date}</p>
+            <p className="video__container__details--other">{new Date(defaultVideo.timestamp).toLocaleDateString()}</p>
           </div>
           <div className="video__container__details video__container__details--right">
             <p className="video__container__details--views">
-              {props.vid.views}
+              {defaultVideo.views}
             </p>
             <p className="video__container__details--likes">
-              {props.vid.likes}
+              {defaultVideo.likes}
             </p>
           </div>
         </div>
         <div className="video__container__description">
-          <p>By {props.vid.description}</p>
+          <p>By {defaultVideo.description}</p>
         </div>
         <div className="video__container__comments">
           <p className="video__container__comments--count">
-            {props.vid.comments.length} Comments
+            {defaultVideo.comments.length} Comments
           </p>
         </div>
       </div>
-    </section>
+     </section>
   );
 };
 
