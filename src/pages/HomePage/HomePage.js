@@ -1,52 +1,90 @@
 import "./HomePage.scss";
 import { useEffect, useState } from "react";
-// import data from "../../data/video-details.json";
-// import shortData from "../../data/videos.json";
 import NextVideo from "../../components/NextVideo/NextVideo";
 import Comments from "../../components/Comments/Comments";
 import VideoPlayerDiv from "../../components/VideoPlayerDiv/VideoPlayerDiv";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import axios from "axios";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function HomePage() {
-  const URL =
-    "https://project-2-api.herokuapp.com/videos?api_key=21fe8862-8c27-4e98-ac56-938eb70588eb";
+  const BASE_URL = "https://project-2-api.herokuapp.com";
+  const API_KEY = "21fe8862-8c27-4e98-ac56-938eb70588eb";
 
   const [originalVideo, setOriginalVideo] = useState([]);
-  const {videoId} = useParams()
+  const [videoThumbnail, setVideoThumbnail] = useState([]);
+  let { videoId } = useParams();
+
+  // let id = videoId || originalVideo.id;
+  let id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
+
+  // console.log(videoId);
+
+  // useEffect(() => {
+  //   const getFirstMount = async () => {
+  //     try {
+  //       const { data } = await axios.get(
+  //         `${BASE_URL}/videos/?api_key=${API_KEY}`
+  //       );
+  //         // console.log(data);
+          
+  //       id = data[0].id;
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   getFirstMount();
+  // }, []);
 
   useEffect(() => {
     const getOriginalVideo = async () => {
-      const { data } = await axios.get(
-        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=21fe8862-8c27-4e98-ac56-938eb70588eb`
-        
-      );
-      // console.log('IN USE EFFECT',data);
-      
-      setOriginalVideo(data);
+      try {
+        const { data } = await axios.get(
+          `${BASE_URL}/videos/${id}?api_key=${API_KEY}`
+        );
+
+        setOriginalVideo(data);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getOriginalVideo();
+  }, [id]);
+
+  useEffect(() => {
+    const getThumbnailVideo = async () => {
+      try {
+        const { data } = await axios.get(
+          `${BASE_URL}/videos/?api_key=${API_KEY}`
+        );
+
+        setVideoThumbnail(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getThumbnailVideo();
+  }, []);
+
  
-  }, [videoId]);
-  return (
-    <>
-      <VideoPlayer defaultVideo={originalVideo} />
-      {/* <main className="main-section">
-          <div className="main-section__content"> */}
-      <VideoPlayerDiv defaultVideo={originalVideo} />
-      <Comments comments={originalVideo} />
-      {/* </div> */}
-      {/* <section className="next-vid-section"> */}
-      {/* <NextVideo
-          comments={comments}
-          parameter={nextVideoId}
-        /> */}
-      {/* </section> */}
-      {/* </main> */}
-    </>
-  );
-}
+    // console.log("VT:", videoThumbnail);
+
+    return (
+      <>
+        <VideoPlayer defaultVideo={originalVideo} />
+        <main className="main-section">
+          <div className="main-section__content">
+            <VideoPlayerDiv defaultVideo={originalVideo} />
+            <Comments comments={originalVideo} />
+          </div>
+          <section className="next-vid-section">
+            <NextVideo thumbnail={videoThumbnail} />
+          </section>
+        </main>
+      </>
+    );
+  }
+
 
 export default HomePage;
 

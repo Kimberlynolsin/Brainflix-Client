@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./NextVideo.scss";
-const NextVideo = ({ comments }) => {
+const NextVideo = ({ thumbnail }) => {
   // console.log(comments[0].id);
+  // console.log(thumbnail);
 
-  const videoThumbnail =
-    comments &&
-    comments.map((element) => {
+  const videoArray =
+    thumbnail &&
+    thumbnail.map((element) => {
       return (
         <Link to={`/${element.id}`}>
           <div
@@ -30,7 +31,7 @@ const NextVideo = ({ comments }) => {
   return (
     <section className="next-vid-section">
       <p className="next-vid-section__title">next videos</p>
-      {videoThumbnail}
+      {videoArray}
     </section>
   );
 };

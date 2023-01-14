@@ -1,11 +1,11 @@
 import "./RenderedComments.scss";
 
-const RenderedComments = ({text}) => {
+const RenderedComments = ({comment}) => {
 
   
-  const {comments} = text
+  const {comments} = comment
   
-  console.log('rendered',comments);
+  // console.log('rendered',comment);
   
   const commentLists = comments && comments.map((element) => {
     return (

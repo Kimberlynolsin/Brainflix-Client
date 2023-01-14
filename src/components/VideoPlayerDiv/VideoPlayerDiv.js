@@ -2,6 +2,7 @@ import "./VideoPlayerDiv.scss";
 
 const VideoPlayerDiv = ({defaultVideo}) => {
 
+// const commentsLength = defaultVideo && defaultVideo.comments.length 
 
   return (
     <section className="video-summary-section">
@@ -30,7 +31,7 @@ const VideoPlayerDiv = ({defaultVideo}) => {
         </div>
         <div className="video__container__comments">
           <p className="video__container__comments--count">
-            {defaultVideo.comments.length} Comments
+            3 Comments
           </p>
         </div>
       </div>

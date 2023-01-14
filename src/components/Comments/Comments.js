@@ -4,7 +4,6 @@ import RenderedComments from "../RenderedComments/RenderedComments";
 
 const Comments = ({comments}) => {
 
-  console.log('COMMENTS:', comments);
   
   return (
     <>
@@ -27,12 +26,12 @@ const Comments = ({comments}) => {
               ></textarea>
             </label>
             <label className="comment__form__container__submit">
-              <input type="submit" value="COMMENT" id="submit" />
+              <input type="button" value="COMMENT" id="submit" />
             </label>
           </div>
         </form>
 
-        <RenderedComments text={comments} />
+        <RenderedComments comment={comments} />
       </section>
     </>
   );
