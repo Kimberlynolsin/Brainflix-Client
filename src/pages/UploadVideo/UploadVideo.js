@@ -1,18 +1,12 @@
 import "./UploadVideo.scss";
 import preview from "../../assets/images/upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
+
 const UploadVideo = () => {
   const navigate = useNavigate();
-  /*
-  publish must show an alert when button is clicked 
-  sete timeout to navigate back to main page
-  
-  */
-
   const handleSubmit = (e) => {
     e.preventDefault();
     let clicked = e.currentTarget;
-
     if (clicked) {
       alert("Your video has been published!!");
       navigate("/");
@@ -21,7 +15,9 @@ const UploadVideo = () => {
   const handleCancel = (e) => {
     e.preventDefault();
     let cancelled = e.currentTarget;
-
+    if (cancelled) {
+      alert("Your upload has been cancelled");
+    }
     navigate(-1);
   };
   return (
@@ -32,7 +28,7 @@ const UploadVideo = () => {
         <div className="upload__container">
           <img className="upload__preview" src={preview} alt="bicycle"></img>
         </div>
-        <form className="upload__form">
+        <form className="upload__form" onSubmit={handleSubmit}>
           <label className="upload__form__label">
             <p className="upload__form__title">title your video </p>
             <input type="text" placeholder="Add a title to your video"></input>
@@ -46,12 +42,7 @@ const UploadVideo = () => {
               placeholder="Add a description to your video"
             ></textarea>
           </label>
-          <input
-            type="submit"
-            value="PUBLISH"
-            className="publish"
-            onClick={handleSubmit}
-          ></input>
+          <input type="submit" value="PUBLISH" className="publish"></input>
           <input
             type="submit"
             value="CANCEL"

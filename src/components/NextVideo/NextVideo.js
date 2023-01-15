@@ -1,19 +1,14 @@
 import { Link } from "react-router-dom";
 import "./NextVideo.scss";
-const NextVideo = ({ thumbnail }) => {
-  // console.log(comments[0].id);
-  // console.log(thumbnail);
-
-  const videoArray =
-    thumbnail &&
-    thumbnail.map((element) => {
+const NextVideo = ({ thumbnail, selectedId }) => {
+  const videoArray = thumbnail
+    .filter((id) => {
+      return id.id !== selectedId;
+    })
+    .map((element) => {
       return (
-        <Link to={`/${element.id}`}>
-          <div
-            id={element.id}
-            key={element.id}
-            className="next-vid-section__thumbnail"
-          >
+        <Link to={`/${element.id}`} key={element.id}>
+          <div id={element.id} className="next-vid-section__thumbnail">
             <img
               className="next-vid-section__img"
               src={element.image}

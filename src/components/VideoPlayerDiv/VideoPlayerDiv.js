@@ -1,9 +1,6 @@
 import "./VideoPlayerDiv.scss";
 
-const VideoPlayerDiv = ({defaultVideo}) => {
-
-// const commentsLength = defaultVideo && defaultVideo.comments.length 
-
+const VideoPlayerDiv = ({ defaultVideo }) => {
   return (
     <section className="video-summary-section">
       <div>
@@ -15,7 +12,9 @@ const VideoPlayerDiv = ({defaultVideo}) => {
             <p className="video__container__details--channel">
               By {defaultVideo.channel}
             </p>
-            <p className="video__container__details--other">{new Date(defaultVideo.timestamp).toLocaleDateString()}</p>
+            <p className="video__container__details--other">
+              {new Date(defaultVideo.timestamp).toLocaleDateString()}
+            </p>
           </div>
           <div className="video__container__details video__container__details--right">
             <p className="video__container__details--views">
@@ -30,12 +29,10 @@ const VideoPlayerDiv = ({defaultVideo}) => {
           <p>By {defaultVideo.description}</p>
         </div>
         <div className="video__container__comments">
-          <p className="video__container__comments--count">
-            3 Comments
-          </p>
+          <p className="video__container__comments--count">3 Comments</p>
         </div>
       </div>
-     </section>
+    </section>
   );
 };
 

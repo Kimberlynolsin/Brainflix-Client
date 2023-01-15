@@ -1,5 +1,5 @@
 import "./Header.scss";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import headerIcon from "../../assets/images/Mohan-muruge.jpg";
 
@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <Link to='/' className="header__logo-link">
+        <Link to="/" className="header__logo-link">
           <img className="header__logo" src={logo} alt="brainflix logo"></img>
         </Link>
         <form className="header__form">
