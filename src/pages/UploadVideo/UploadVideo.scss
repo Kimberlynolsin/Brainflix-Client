@@ -5,7 +5,6 @@
   border-top: 0.1rem solid $mercury;
   @include desktop {
     padding: 0 15rem 3rem 15rem;
-    
   }
 
   &__title {
@@ -23,15 +22,16 @@
     text-transform: uppercase;
     font-size: 1.3rem;
     color: $silver;
-    margin: 0 1.6rem 1rem;
+    margin: 0 1.6rem 1rem 0;
 
     @include tablet {
       font-weight: normal;
       margin: $margin-tablet;
       margin-top: 3rem;
+      margin-left: 0;
     }
 
-    @include desktop{
+    @include desktop {
       margin: 0 0 2rem 0;
     }
   }
@@ -90,7 +90,7 @@
       padding: 0;
       border: 0;
       border-radius: 0.5rem;
-      border: 1px solid $silver;
+      border: 1px solid $mercury;
       font-family: "Avenir";
       padding-left: 1rem;
     }
@@ -117,6 +117,10 @@
 
       &::placeholder {
         padding-top: 1rem;
+      }
+
+      @include tablet{
+        margin-bottom: 2rem;
       }
     }
     &__btn__publish {

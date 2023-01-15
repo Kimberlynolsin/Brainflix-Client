@@ -25,10 +25,10 @@ const UploadVideo = () => {
       <section className="upload">
         <h1 className="upload__title">Upload Video</h1>
         <div className="upload__desktop">
-        <div className="upload__container">
-          <h2 className="upload__subtitle">video thumbnail</h2>
-          <img className="upload__preview" src={preview} alt="bicycle"></img>
-        </div>
+          <div className="upload__container">
+            <h2 className="upload__subtitle">video thumbnail</h2>
+            <img className="upload__preview" src={preview} alt="bicycle"></img>
+          </div>
           <form className="upload__form" onSubmit={handleSubmit}>
             <label className="upload__form__label">
               <p className="upload__form__title">title your video </p>

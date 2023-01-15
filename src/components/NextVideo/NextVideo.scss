@@ -27,11 +27,8 @@
   &__thumbnail {
     display: flex;
     margin: 0 0 1rem 0;
-    align-items: center;
+    align-items: flex-start;
 
-    // @include tablet {
-    //   margin: 0 0 3rem 0;
-    // }
 
     @include desktop {
       margin-bottom: 2rem;
@@ -49,20 +46,16 @@
       width: 20rem;
       aspect-ratio: 1.7;
     }
-
-    @include desktop {
-      // width: 41rem;
-      // aspect-ratio: 2;
-      // max-height: 50rem;
-    }
   }
 
   &__description {
     font-weight: bold;
     margin-top: 0;
-
+    
+    
     @include desktop {
       margin-bottom: 0.5rem;
+      margin-top: 0;
     }
   }
 
