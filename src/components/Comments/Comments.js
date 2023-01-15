@@ -2,9 +2,7 @@ import "./Comments.scss";
 import mohan from "../../assets/images/Mohan-muruge.jpg";
 import RenderedComments from "../RenderedComments/RenderedComments";
 
-const Comments = ({comments}) => {
-
-  
+const Comments = ({ comments }) => {
   return (
     <>
       <section className="comments-section">
@@ -30,7 +28,6 @@ const Comments = ({comments}) => {
             </label>
           </div>
         </form>
-
         <RenderedComments comment={comments} />
       </section>
     </>

@@ -21,7 +21,6 @@ const Header = () => {
               alt="profile picture"
             ></img>
           </div>
-
           <Link to="/upload" className="header__btn-link">
             <label className="header__btn__label">
               <button type="submit" name="submit-btn">

@@ -1,4 +1,3 @@
-import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import UploadVideo from "./pages/UploadVideo/UploadVideo";
@@ -22,5 +21,3 @@ function App() {
 }
 
 export default App;
-
-

@@ -12,11 +12,11 @@ function HomePage() {
   const API_KEY = "21fe8862-8c27-4e98-ac56-938eb70588eb";
 
   const [originalVideo, setOriginalVideo] = useState(null);
-  const [videoThumbnail, setVideoThumbnail] = useState([]);
+  const [initialId, setInitialId] = useState(null);
+  const [videoThumbnail, setVideoThumbnail] = useState(null);
 
   let { videoId } = useParams();
-
-  let id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
+  let id = videoId || initialId;
 
   useEffect(() => {
     const getOriginalVideo = async () => {
@@ -39,7 +39,7 @@ function HomePage() {
         const { data } = await axios.get(
           `${BASE_URL}/videos/?api_key=${API_KEY}`
         );
-
+        setInitialId(data[0].id);
         setVideoThumbnail(data);
       } catch (error) {
         console.log(error);
@@ -48,6 +48,9 @@ function HomePage() {
     getThumbnailVideo();
   }, []);
 
+  if (!originalVideo || !videoThumbnail) {
+    return <p>Page is loading.....</p>;
+  }
   return (
     <>
       {originalVideo && <VideoPlayer defaultVideo={originalVideo} />}
@@ -56,7 +59,7 @@ function HomePage() {
           {originalVideo && <VideoPlayerDiv defaultVideo={originalVideo} />}
           {originalVideo && <Comments comments={originalVideo} />}
         </div>
-          <NextVideo thumbnail={videoThumbnail} selectedId={id} />
+        <NextVideo thumbnail={videoThumbnail} selectedId={id} />
       </main>
     </>
   );

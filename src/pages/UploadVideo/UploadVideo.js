@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const UploadVideo = () => {
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let clicked = e.currentTarget;
