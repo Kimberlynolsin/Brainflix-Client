@@ -24,32 +24,50 @@ const UploadVideo = () => {
     <>
       <section className="upload">
         <h1 className="upload__title">Upload Video</h1>
-        <h2 className="upload__subtitle">video thumbnail</h2>
+        <div className="upload__desktop">
         <div className="upload__container">
+          <h2 className="upload__subtitle">video thumbnail</h2>
           <img className="upload__preview" src={preview} alt="bicycle"></img>
         </div>
-        <form className="upload__form" onSubmit={handleSubmit}>
-          <label className="upload__form__label">
-            <p className="upload__form__title">title your video </p>
-            <input type="text" placeholder="Add a title to your video"></input>
-          </label>
-          <label className="upload__form__description">
-            <p className="upload__form__description__title">
-              add a video description
-            </p>
-            <textarea
-              type="text"
-              placeholder="Add a description to your video"
-            ></textarea>
-          </label>
-          <input type="submit" value="PUBLISH" className="publish"></input>
-          <input
-            type="submit"
-            value="CANCEL"
-            className="cancel"
-            onClick={handleCancel}
-          ></input>
-        </form>
+          <form className="upload__form" onSubmit={handleSubmit}>
+            <label className="upload__form__label">
+              <p className="upload__form__title">title your video </p>
+              <input
+                type="text"
+                placeholder="Add a title to your video"
+                className="upload__form__input"
+              ></input>
+            </label>
+            <label className="upload__form__description">
+              <p className="upload__form__description__title">
+                add a video description
+              </p>
+              <textarea
+                type="text"
+                placeholder="Add a description to your video"
+                className="upload__form__description__textarea"
+              ></textarea>
+            </label>
+            <div className="upload__form__btn-container">
+              <input
+                type="submit"
+                value="PUBLISH"
+                className="upload__form__btn__publish"
+              ></input>
+              <input
+                type="submit"
+                value="CANCEL"
+                className="upload__form__btn__cancel"
+                onClick={handleCancel}
+              ></input>
+              <input
+                type="submit"
+                value="PUBLISH"
+                className="upload__form__btn__publish--tablet"
+              ></input>
+            </div>
+          </form>
+        </div>
       </section>
     </>
   );

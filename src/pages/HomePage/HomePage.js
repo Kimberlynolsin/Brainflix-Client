@@ -56,9 +56,7 @@ function HomePage() {
           {originalVideo && <VideoPlayerDiv defaultVideo={originalVideo} />}
           {originalVideo && <Comments comments={originalVideo} />}
         </div>
-        <section className="next-vid-section">
           <NextVideo thumbnail={videoThumbnail} selectedId={id} />
-        </section>
       </main>
     </>
   );
