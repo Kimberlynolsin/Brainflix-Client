@@ -29,6 +29,10 @@
     }
   }
 
+  &__descrip {
+    width: 100%;
+  }
+
   &__items {
     display: flex;
     justify-content: space-between;

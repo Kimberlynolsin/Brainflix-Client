@@ -29,7 +29,7 @@ const VideoPlayerDiv = ({ defaultVideo }) => {
           <p>By {defaultVideo.description}</p>
         </div>
         <div className="video__container__comments">
-          <p className="video__container__comments--count">3 Comments</p>
+          <p className="video__container__comments--count">{`${defaultVideo.comments.length} Comments`}</p>
         </div>
       </div>
     </section>
