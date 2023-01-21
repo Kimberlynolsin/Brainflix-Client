@@ -3,6 +3,8 @@
 
 .video-section {
   &__container {
+    display: flex;
+    justify-content: center;
     background-color: black;
 
     @include tablet {

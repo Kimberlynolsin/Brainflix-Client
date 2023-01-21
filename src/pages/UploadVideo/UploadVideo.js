@@ -23,19 +23,18 @@ const UploadVideo = () => {
       image: "http://localhost:8000/upload-preview.jpg",
     };
 
+    if (!title || !description) {
+      alert("Please fill out the fields");
+      return;
+    }
     axios
       .post("http://localhost:8000/videos", newInput)
       .then((response) => {
         console.log(response);
       })
       .catch((error) => {
-        console.log(error.message);
+        console.log("UploadVideo:", error.message);
       });
-
-    if (!title || !description) {
-      alert("Please fill out the fields");
-      return;
-    }
 
     if (clicked) {
       alert("Your video has been published!!");

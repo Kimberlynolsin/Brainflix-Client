@@ -24,7 +24,7 @@ function HomePage() {
 
         setOriginalVideo(data);
       } catch (error) {
-        console.log(error);
+        console.log("Homepage:", error);
       }
     };
     getOriginalVideo();
@@ -37,7 +37,7 @@ function HomePage() {
         setInitialId(data[0].id);
         setVideoThumbnail(data);
       } catch (error) {
-        console.log(error);
+        console.log("Homepage Thumbnail:", error);
       }
     };
     getThumbnailVideo();
