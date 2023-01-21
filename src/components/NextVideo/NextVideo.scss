@@ -2,10 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 
 .next-vid-section {
-  a {
-    text-decoration: none;
-    color: black;
-  }
   margin: $margin-mobile;
   @include tablet {
     margin: $margin-tablet;
@@ -22,44 +18,6 @@
 
     @include desktop {
       margin-bottom: 1rem;
-    }
-  }
-  &__thumbnail {
-    display: flex;
-    margin: 0 0 1rem 0;
-    align-items: flex-start;
-
-    @include desktop {
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__img {
-    max-width: 12rem;
-    border-radius: 4px;
-    margin-right: 1rem;
-    max-height: 60rem;
-    aspect-ratio: 1.5;
-
-    @include tablet {
-      width: 20rem;
-      aspect-ratio: 1.7;
-    }
-  }
-
-  &__description {
-    font-weight: bold;
-    margin-top: 0;
-
-    @include desktop {
-      margin-bottom: 0.5rem;
-      margin-top: 0;
-    }
-  }
-
-  &__author {
-    @include desktop {
-      margin: 0;
     }
   }
 }

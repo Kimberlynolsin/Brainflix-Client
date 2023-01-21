@@ -103,6 +103,7 @@
     width: 100%;
 
     [type="submit"] {
+      cursor: pointer;
       background: url(../../assets/images/upload.svg) no-repeat;
       @include icon-input;
       @include btn;

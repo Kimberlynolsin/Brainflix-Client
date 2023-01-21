@@ -96,6 +96,7 @@
     }
 
     [type="submit"] {
+      cursor: pointer;
       @include icon-input;
       border: 0;
       width: 100%;
@@ -103,6 +104,7 @@
 
       @include tablet {
         width: 25%;
+        height: 4.5rem;
       }
     }
 
@@ -114,12 +116,13 @@
       margin-top: 0;
       font-family: "Avenir";
       height: 9rem;
+      resize: none;
 
       &::placeholder {
         padding-top: 1rem;
       }
 
-      @include tablet{
+      @include tablet {
         margin-bottom: 2rem;
       }
     }

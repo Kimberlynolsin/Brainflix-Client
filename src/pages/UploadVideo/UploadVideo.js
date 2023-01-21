@@ -29,10 +29,16 @@ const UploadVideo = () => {
       .catch((error) => {
         console.log(error);
       });
-      
+
+    if (!title || !description) {
+      alert("Please fill out the fields");
+      return;
+    }
+
     if (clicked) {
       alert("Your video has been published!!");
       navigate("/");
+      return;
     }
   };
   const handleCancel = (e) => {

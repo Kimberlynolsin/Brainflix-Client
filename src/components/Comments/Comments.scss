@@ -19,7 +19,7 @@
   label {
     text-transform: uppercase;
     color: $silver;
-    font-weight: 600;
+    font-weight: normal;
   }
   textarea {
     padding: 1rem;
@@ -28,6 +28,7 @@
     border: solid $mercury;
     border-radius: 0.5rem;
     font-size: 1.4rem;
+    resize: none;
 
     input::placeholder {
       color: black;
