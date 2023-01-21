@@ -1,7 +1,7 @@
 import "./UploadVideo.scss";
 import preview from "../../assets/images/upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import axios from "axios";
 
 const UploadVideo = () => {
@@ -29,6 +29,7 @@ const UploadVideo = () => {
       .catch((error) => {
         console.log(error);
       });
+      
     if (clicked) {
       alert("Your video has been published!!");
       navigate("/");
@@ -40,7 +41,7 @@ const UploadVideo = () => {
     if (cancelled) {
       alert("Your upload has been cancelled");
     }
-    navigate(-1)
+    navigate(-1);
   };
   return (
     <>
