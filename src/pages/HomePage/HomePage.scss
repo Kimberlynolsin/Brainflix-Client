@@ -8,10 +8,12 @@
     display: flex;
 
     &__content {
+      display: flex;
       flex-direction: column;
       border-right: 1px solid $mercury;
       margin-left: 15rem;
       max-width: 100%;
+      flex-grow: 1;
     }
   }
 
