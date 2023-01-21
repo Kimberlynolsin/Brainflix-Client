@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "../../components/VideoPlayer/VideoPlayer.scss";
+import "../../components/CurrentlyPlaying/CurrentlyPlaying.scss";
 
-const VideoPlayer = ({ defaultVideo }) => {
+const CurrentlyPlaying = ({ defaultVideo }) => {
   return (
     <section className="video-section">
       <div className="video-section__container">
@@ -17,4 +17,4 @@ const VideoPlayer = ({ defaultVideo }) => {
     </section>
   );
 };
-export default VideoPlayer;
+export default CurrentlyPlaying;

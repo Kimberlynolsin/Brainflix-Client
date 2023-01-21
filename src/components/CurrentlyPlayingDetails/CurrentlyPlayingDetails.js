@@ -1,6 +1,6 @@
-import "./VideoPlayerDiv.scss";
+import "./CurrentlyPlayingDetails.scss";
 
-const VideoPlayerDiv = ({ defaultVideo }) => {
+const CurrentlyPlayingDetails = ({ defaultVideo }) => {
   return (
     <section className="video-summary-section">
       <div>
@@ -26,7 +26,7 @@ const VideoPlayerDiv = ({ defaultVideo }) => {
           </div>
         </div>
         <div className="video__container__description">
-          <p>By {defaultVideo.description}</p>
+          <p> {defaultVideo.description}</p>
         </div>
         <div className="video__container__comments">
           <p className="video__container__comments--count">{`${defaultVideo.comments.length} Comments`}</p>
@@ -36,4 +36,4 @@ const VideoPlayerDiv = ({ defaultVideo }) => {
   );
 };
 
-export default VideoPlayerDiv;
+export default CurrentlyPlayingDetails;

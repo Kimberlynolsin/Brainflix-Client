@@ -2,8 +2,8 @@ import "./HomePage.scss";
 import { useEffect, useState } from "react";
 import NextVideo from "../../components/NextVideo/NextVideo";
 import Comments from "../../components/Comments/Comments";
-import VideoPlayerDiv from "../../components/VideoPlayerDiv/VideoPlayerDiv";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import CurrentlyPlayingDetails from "../../components/CurrentlyPlayingDetails/CurrentlyPlayingDetails";
+import CurrentlyPlaying from "../../components/CurrentlyPlaying/CurrentlyPlaying";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -53,10 +53,10 @@ function HomePage() {
   }
   return (
     <>
-      <VideoPlayer defaultVideo={originalVideo} />
+      <CurrentlyPlaying defaultVideo={originalVideo} />
       <main className="main-section">
         <div className="main-section__content">
-          <VideoPlayerDiv defaultVideo={originalVideo} />
+          <CurrentlyPlayingDetails defaultVideo={originalVideo} />
           <Comments comments={originalVideo} />
         </div>
         <NextVideo thumbnail={videoThumbnail} selectedId={id} />
