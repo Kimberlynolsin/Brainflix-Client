@@ -8,7 +8,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 function HomePage() {
-  const BASE_URL = "https://project-2-api.herokuapp.com";
+  const BASE_URL = "http://localhost:8000";
   const API_KEY = "21fe8862-8c27-4e98-ac56-938eb70588eb";
 
   const [originalVideo, setOriginalVideo] = useState(null);
@@ -53,11 +53,11 @@ function HomePage() {
   }
   return (
     <>
-      {originalVideo && <VideoPlayer defaultVideo={originalVideo} />}
+      <VideoPlayer defaultVideo={originalVideo} />
       <main className="main-section">
         <div className="main-section__content">
-          {originalVideo && <VideoPlayerDiv defaultVideo={originalVideo} />}
-          {originalVideo && <Comments comments={originalVideo} />}
+          <VideoPlayerDiv defaultVideo={originalVideo} />
+          <Comments comments={originalVideo} />
         </div>
         <NextVideo thumbnail={videoThumbnail} selectedId={id} />
       </main>
