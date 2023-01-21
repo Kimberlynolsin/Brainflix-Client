@@ -1,6 +1,6 @@
-import "./RenderedComments.scss";
+import "./CommentsRendered.scss";
 
-const RenderedComments = ({ comment }) => {
+const CommentsRendered = ({ comment }) => {
   const { comments } = comment;
   const commentLists = comments.map((element) => {
     return (
@@ -25,4 +25,4 @@ const RenderedComments = ({ comment }) => {
     </>
   );
 };
-export default RenderedComments;
+export default CommentsRendered;

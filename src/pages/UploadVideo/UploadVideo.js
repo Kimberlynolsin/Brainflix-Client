@@ -10,6 +10,7 @@ const UploadVideo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     let clicked = e.currentTarget;
 
     const form = formRef.current;
@@ -19,6 +20,7 @@ const UploadVideo = () => {
     const newInput = {
       title: title,
       description: description,
+      image: "http://localhost:8000/upload-preview.jpg",
     };
 
     axios
@@ -27,7 +29,7 @@ const UploadVideo = () => {
         console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.message);
       });
 
     if (!title || !description) {
@@ -41,6 +43,7 @@ const UploadVideo = () => {
       return;
     }
   };
+
   const handleCancel = (e) => {
     e.preventDefault();
     let cancelled = e.currentTarget;
@@ -49,6 +52,7 @@ const UploadVideo = () => {
     }
     navigate(-1);
   };
+
   return (
     <>
       <section className="upload">

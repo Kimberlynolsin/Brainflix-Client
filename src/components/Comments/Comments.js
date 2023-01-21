@@ -1,6 +1,6 @@
 import "./Comments.scss";
 import mohan from "../../assets/images/Mohan-muruge.jpg";
-import RenderedComments from "../RenderedComments/RenderedComments";
+import CommentsRendered from "../CommentsRendered/CommentsRendered";
 
 const Comments = ({ comments }) => {
   return (
@@ -10,7 +10,7 @@ const Comments = ({ comments }) => {
           <div>
             <img
               src={mohan}
-              alt="profile picture"
+              alt="user profile"
               className="comment__form__img"
             />
           </div>
@@ -28,7 +28,7 @@ const Comments = ({ comments }) => {
             </label>
           </div>
         </form>
-        <RenderedComments comment={comments} />
+        <CommentsRendered comment={comments} />
       </section>
     </>
   );

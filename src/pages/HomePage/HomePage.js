@@ -1,15 +1,14 @@
 import "./HomePage.scss";
+import axios from "axios";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import NextVideo from "../../components/NextVideo/NextVideo";
 import Comments from "../../components/Comments/Comments";
 import CurrentlyPlayingDetails from "../../components/CurrentlyPlayingDetails/CurrentlyPlayingDetails";
 import CurrentlyPlaying from "../../components/CurrentlyPlaying/CurrentlyPlaying";
-import axios from "axios";
-import { useParams } from "react-router-dom";
 
 function HomePage() {
   const BASE_URL = "http://localhost:8000";
-  const API_KEY = "21fe8862-8c27-4e98-ac56-938eb70588eb";
 
   const [originalVideo, setOriginalVideo] = useState(null);
   const [initialId, setInitialId] = useState(null);
@@ -21,9 +20,7 @@ function HomePage() {
   useEffect(() => {
     const getOriginalVideo = async () => {
       try {
-        const { data } = await axios.get(
-          `${BASE_URL}/videos/${id}?api_key=${API_KEY}`
-        );
+        const { data } = await axios.get(`${BASE_URL}/videos/${id}`);
 
         setOriginalVideo(data);
       } catch (error) {
@@ -36,9 +33,7 @@ function HomePage() {
   useEffect(() => {
     const getThumbnailVideo = async () => {
       try {
-        const { data } = await axios.get(
-          `${BASE_URL}/videos/?api_key=${API_KEY}`
-        );
+        const { data } = await axios.get(`${BASE_URL}/videos`);
         setInitialId(data[0].id);
         setVideoThumbnail(data);
       } catch (error) {
@@ -49,8 +44,9 @@ function HomePage() {
   }, []);
 
   if (!originalVideo || !videoThumbnail) {
-    return <p>Page is loading.....</p>;
+    return <h3 className="main-section__loading">Page is loading.....</h3>;
   }
+
   return (
     <>
       <CurrentlyPlaying defaultVideo={originalVideo} />
