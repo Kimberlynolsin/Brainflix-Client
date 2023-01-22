@@ -18,7 +18,7 @@ const Header = () => {
             <img
               className="header__icon"
               src={headerIcon}
-              alt="profile picture"
+              alt="user profile"
             ></img>
           </div>
           <Link to="/upload" className="header__btn-link">
@@ -31,7 +31,7 @@ const Header = () => {
           <img
             className="header__icon header__icon--tablet"
             src={headerIcon}
-            alt="profile picture"
+            alt="user profile"
           ></img>
         </form>
       </div>
